@@ -335,7 +335,7 @@ function drawStrip(canvas, photos) {
   ctx.fillStyle = 'rgba(100, 80, 90, 0.5)';
   ctx.font = `bold 11px 'Space Mono', monospace`;
   ctx.textAlign = 'center';
-  ctx.fillText('✦ myOS photobooth ✦', stripW / 2, stripH - 18);
+  ctx.fillText('✦ A4T photobooth ✦', stripW / 2, stripH - 18);
 
 
   const emojiCount = 14 + Math.floor(Math.random() * 8);
