@@ -1,57 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> A4T ✦ </title> 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css"> 
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A4T ✦</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
 </head>
-<header id="topbar"> 
-    <span id="topbar-brand"> A4T ✦ </span>
-    <span id="topbar-tagline"> ✧ archive 4 tams ✧ </span>
-    <span id="topbar-clock"></span> 
+
+<body>
+
+<header id="topbar">
+  <span id="topbar-brand">A4T ✦</span>
+  <span id="topbar-tagline">✧ archive 4 tams ✧</span>
+  <span id="topbar-clock"></span>
 </header>
 
 <main id="desktop">
 
-    <div id="icon-column">
-        <div class="desktop-icon" data-app="photobooth" id="icon-photobooth">
-            <div class="icon-graphic">📸</div>
-            <span>PhotoBooth</span>
-        </div>
+  <div id="icon-column">
+    <div class="desktop-icon" data-app="home">
+      <div class="icon-graphic">🏠</div>
+      <span>Home</span>
     </div>
+    <div class="desktop-icon" data-app="photobooth">
+      <div class="icon-graphic">📸</div>
+      <span>PhotoBooth</span>
+    </div>
+    <div class="desktop-icon" data-app="spotify">
+      <div class="icon-graphic">🎵</div>
+      <span>My Spotify</span>
+    </div>
+    <div class="desktop-icon" data-app="about">
+      <div class="icon-graphic">👋</div>
+      <span>About Me</span>
+    </div>
+  </div>
 
-        <div class="window" id="win-photobooth" data-title="✦ myOS Photobooth ✦">
-      <div class="window-titlebar">
-        <div class="titlebar-dots">
-          <span class="dot dot-close"></span>
-          <span class="dot dot-min"></span>
-          <span class="dot dot-max"></span>
-        </div>
-        <span class="window-title">✦ A4T Photobooth ✦</span>
+  <!-- HOME WINDOW -->
+  <div class="window" id="win-home">
+    <div class="window-titlebar">
+      <div class="titlebar-dots">
+        <span class="dot dot-close"></span>
+        <span class="dot dot-min"></span>
+        <span class="dot dot-max"></span>
       </div>
-      <div class="window-body photobooth-body">
+      <span class="window-title">✦ Home ✦</span>
+    </div>
+    <div class="window-body">
+      <h1 class="welcome-heading">Welcome ✦</h1>
+      <p class="welcome-sub">tam's little corner of the internet.</p>
 
-
-        <div id="pb-camera-wrap">
-          <video id="pb-video" autoplay playsinline muted></video>
-          <div id="pb-countdown" class="hidden"></div>
+      <!-- Scrolling marquee strip -->
+      <div class="home-marquee-wrap">
+        <div class="home-marquee">
+          <span>✦ music</span><span>✧ reading</span><span>✦ coding</span><span>✧ art</span><span>✦ photography</span><span>✧ archive 4 tams</span>
+          <span>✦ music</span><span>✧ reading</span><span>✦ coding</span><span>✧ art</span><span>✦ photography</span><span>✧ archive 4 tams</span>
         </div>
+      </div>
 
-        <div id="pb-controls">
-          <button id="pb-start-btn">📷 Take Strip</button>
-          <button id="pb-save-btn" class="hidden">💾 Save</button>
+      <!-- 3-column equal grid -->
+      <div class="home-grid">
+        <button class="home-card" data-app="about">
+          <div class="icon-graphic">👋</div>
+          <span>About Me</span>
+        </button>
+        <button class="home-card" data-app="photobooth">
+          <div class="icon-graphic">📸</div>
+          <span>Photobooth</span>
+        </button>
+        <button class="home-card" onclick="window.open('https://archive4tams.xyz/spotify', '_blank')">
+          <div class="icon-graphic">🎵</div>
+          <span>Spotify</span>
+        </button>
+      </div>
+
+
+      <p class="home-section-label">✧ currently</p>
+      <div class="home-now-row">
+        <div class="home-now-dot"></div>
+        <div class="home-now-text">
+          <strong>listening to</strong> — whatever my mood is<br>
+          <strong>reading</strong> — something good, probably
         </div>
-        <canvas id="pb-canvas" class="hidden"></canvas>
+      </div>
 
+      <div class="home-footer-row">
+        <span class="home-footer-hint">✧ click on any of the suggested apps! ✧</span>
+        <span class="tag">archive 4 tams</span>
       </div>
     </div>
+  </div>
 
+
+  <div class="window" id="win-about" data-title="About Me">
+    <div class="window-titlebar">
+      <div class="titlebar-dots">
+        <span class="dot dot-close"></span>
+        <span class="dot dot-min"></span>
+        <span class="dot dot-max"></span>
+      </div>
+      <span class="window-title">✦ About Me ✦</span>
+    </div>
+    <div class="window-body about-body">
+      <div class="about-avatar">🌿</div>
+      <h2 class="about-name">Tamanna ✦</h2>
+      <p class="about-role">Student · Dreamer</p>
+      <div class="about-divider"></div>
+      <p class="about-bio">
+        Hello! I'm Tams, a student who loves exploring ideas and creating small projects. Passionate about music, reading, and experimenting with tech.
+      </p>
+      <div class="about-tags">
+        <span class="tag">✦ music</span>
+        <span class="tag">✧ reading</span>
+        <span class="tag">✦ coding</span>
+        <span class="tag">✧ art</span>
+        <span class="tag">✦ photography</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="window" id="win-spotify" data-title="Spotify">
+    <div class="window-titlebar">
+      <div class="titlebar-dots">
+        <span class="dot dot-close"></span>
+        <span class="dot dot-min"></span>
+        <span class="dot dot-max"></span>
+      </div>
+      <span class="window-title">✦ Spotify ✦</span>
+    </div>
+    <div class="window-body">
+      <p>    </p>
+      <button class="app-button" onclick="window.open('https://archive4tams.xyz/spotify', '_blank')">
+        Open Spotify
+      </button>
+    </div>
+  </div>
+
+
+  <div class="window" id="win-photobooth">
+    <div class="window-titlebar">
+      <div class="titlebar-dots">
+        <span class="dot dot-close"></span>
+        <span class="dot dot-min"></span>
+        <span class="dot dot-max"></span>
+      </div>
+      <span class="window-title">✦ A4T Photobooth ✦</span>
+    </div>
+    <div class="window-body photobooth-body">
+      <div id="pb-camera-wrap">
+        <video id="pb-video" autoplay playsinline muted></video>
+        <div id="pb-countdown" class="hidden"></div>
+      </div>
+      <div id="pb-controls">
+        <button id="pb-start-btn">📷 Take Strip</button>
+        <button id="pb-save-btn" class="hidden">💾 Save</button>
+      </div>
+      <canvas id="pb-canvas" class="hidden"></canvas>
+    </div>
+  </div>
+
+
+  <div class="window widget window-open" id="win-weather" style="right: 20px; top: 20px;">
+    <div class="window-titlebar">
+      <div class="titlebar-dots">
+        <span class="dot dot-close"></span>
+        <span class="dot dot-min"></span>
+        <span class="dot dot-max"></span>
+      </div>
+      <span class="window-title">✦ Weather ✦</span>
+    </div>
+    <div class="window-body widget-body">
+      <div class="weather-icon">🌤️</div>
+      <div class="weather-temp" id="weather-temp">--°C</div>
+      <div class="weather-location">Dubai, AE</div>
+      <div class="weather-desc" id="weather-desc">Loading...</div>
+      <div class="weather-details" id="weather-details">
+        <span>💨 -- km/h</span>
+        <span>💧 --%</span>
+      </div>
+    </div>
+  </div>
 
 </main>
 
 <script src="script.js"></script>
+</body>
+</html>
